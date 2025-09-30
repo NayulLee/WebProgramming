@@ -1,0 +1,38 @@
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>셀렉터 예제</title>
+  <style>
+    /* 태그 이름 셀렉터 */
+    p { color: green; }
+
+    /* 클래스 셀렉터 */
+    .highlight { background: yellow; }
+
+    /* 아이디 셀렉터 */
+    #title { font-size: 24px; color: blue; }
+
+    /* 자식 셀렉터 */
+    div > strong { color: red; }
+
+    /* 자손 셀렉터 */
+    ul strong { color: purple; }
+  </style>
+</head>
+<body>
+  <h1 id="title">CSS 셀렉터 예제</h1>
+  <p>이건 기본 문단 (green)</p>
+  <p class="highlight">이건 highlight 클래스 (노란 배경)</p>
+
+  <div>
+    <strong>div의 직계 strong (빨강)</strong>
+    <p><strong>div 안의 자손 strong (색 없음)</strong></p>
+  </div>
+
+  <ul>
+    <li><strong>ul 자식 strong (보라)</strong></li>
+    <li><p><strong>ul 손자 strong (보라)</strong></p></li>
+  </ul>
+</body>
+</html>

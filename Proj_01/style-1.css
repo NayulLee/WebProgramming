@@ -1,0 +1,87 @@
+/* 모든 요소의 여백과 패딩 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 여백 직접 설정*/
+h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+p {
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+section ul,
+section ol {
+    /* 섹션 안에 있는 리스트만 여백설정*/
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+.container {
+    display: flex;
+}
+
+/* 코드 블록 모양용 CSS*/
+code {
+    background-color: #eeeeee; 
+    padding: 2px 4px;
+    border-radius: 4px;        /* 모서리 둥글게 */
+    color: red;
+    font-size: 0.95em;
+}
+
+
+/* 본문(main)영역 */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 40px;
+    border: 1px solid #ccc
+}
+
+.two_col{
+    display: flex;
+    gap: 60px
+}
+.two_col pre{
+    flex: 1;
+    background: #eeeeee;
+    border-radius: 4px;
+    padding: 10px;
+    overflow-x: auto;
+}
+.two_col .explanation{
+    flex: 1;
+}
+/* 사이드바(목차) 영역 */
+nav {
+    width: 200px;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+nav a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+nav a:hover {
+    color: blue;
+}
