@@ -57,7 +57,7 @@ section ol {
 }
 
 li {
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 
 /* 이미지, 테이블, 2단 레이아웃 가운데 */
@@ -106,7 +106,7 @@ code {
 
 /* 사이드바(목차) */
 nav {
-    width: 250px;         /* 고정 폭 */
+    width: 300px;         /* 고정 폭 */
     flex-shrink: 0;       /* 줄어들지 않음 */
     padding: 20px;
     border-left: 1px solid #ccc;

@@ -70,8 +70,8 @@
                             <li>옆의 다른 인라인 요소랑 나란히 배치할 수 있다.</li>
                         </ul>
                         <br>
-                        <strong>대표 태그</strong>
                         <table>
+                            <caption><strong>대표 태그</strong></caption>
                             <tbody>
                                 <tr>
                                     <td><code>strong</code></td>
@@ -104,8 +104,11 @@
                 <h2>🥕 리스트 만들기 3가지 태그</h2>
 
                 <div class="two_col">
+                    <div class="pre">
                     <img src="list_example.png" alt="예시 그림">
+                    </div>
                     <div class="explanation">
+                        <br>
                         <ol>
                             <li><strong>순서 있는 리스트 <code>ol...ol</code></strong>
                                 <br>항목들에 자동으로 번호 1, 2, 3이 붙는다.
@@ -128,6 +131,46 @@
             <!-- 테이블 관련 태그 -->
             <section id="tableTag">
                 <h1>🐰4. 테이블 관련 태그</h1>
+                <h2>🥕 표 만드는 데 사용되는 태그</h2>
+                <div class="two_col">
+                    <div class="pre">
+                        <img src="table_example.png" alt="테이블 코드">
+                    </div>
+                    <div class="explanation">
+                        <ol>
+                            <li><strong>표 전체를 담는 컨테이너<code>&ltol...ol&gt</code></strong>
+                                <br>표의 시작과 끝을 감싸는 태그
+                                <br>안에 행<code>&lttr&gt</code>과 열<code>&ltth&gt, &lttd&gt</code>가 들어간다.
+                            <li><strong>표 제목<code>&ltcaption&gt</code></strong>
+                                <br>표 제목을 지정할 때 사용, 보통 표 맨 위에 나타난다.
+                            <li><strong>표의 헤딩 그룹<code>&ltthread&gt</code></strong>
+                                <br>표의 머리 부분, 열 제목, th들을 묶어주는 역할
+                                <br>여러 행이 필요할 때도 묶어서 관리 가능하다
+                            <li><strong>표의 바닥 그룹<code>&lttfoot&gt</code></strong>
+                                <br>표의 바닥 부분. 합계, 평군 등 마지막 줄에 들어갈 데이터를 묶을 때 사용
+                            <li><strong>표의 본문 그룹<code>&lttbody&gt</code></strong>
+                                <br>실제 데이터 셀들을 모아서 관리한다
+                                <br><code>&lttr&gt</code>행 단위로 나누어 넣는다.
+                            <li><strong>행(row)<code>&lttr&gt</code></strong>
+                                <br>표의 한 줄을 의미, 각 행 안에 열 제목<code>&ltth&gt</code>또는 데이터 <code>&lttd&gt</code>넣는다.
+                            <li><strong>열 제목 셀<code>&lttht&gt</code></strong>
+                                <br>머리글 셀, 보통 글자가 굵게 표시되고 가운데 정렬된다.
+                                <br>어떤 열의 의미인지 알려주는 셀
+                            <li><strong>데이터 셀<code>&lttd&gt</code></strong>
+                                <br>실제 데이터를 넣는 셀, <code>&lttd&gt</code>와 달리 일반 글자 스타일
+                        </ol>
+                    </div>
+                </div>
+            <hr style="margin: 15px;">
+            <h2>🥕 표의 편집</h2>
+            HTML표(table)에서 셀 병합을 할 때 사용하는 속성
+            <div class="two_col">
+                    <div class="pre">
+                        <img src="table_example.png" alt="테이블 코드">
+                    </div>
+
+
+            </div>
             </section>
 
             <!-- 미디어 관련 태그 -->
