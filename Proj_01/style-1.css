@@ -1,78 +1,114 @@
-/* 모든 요소의 여백과 패딩 초기화 */
+/* 모든 요소 초기화 */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    
 }
 
-/* 여백 직접 설정*/
-h3 {
-    margin-top: 8px;
-    margin-bottom: 8px;
+/* 컨테이너: main과 nav를 나란히 배치 */
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px; /* main과 nav 사이 간격 */
 }
 
-p {
-    margin-top: 4px;
-    margin-bottom: 8px;
+/* 본문(main) 영역 */
+main {
+    text-align: center;      /* 텍스트, 이미지, 표 중앙 */
+    flex: 1;                 /* 남은 공간 모두 차지 */
+    padding: 20px;
 }
 
+/* 섹션 스타일 */
+section {
+    margin-bottom: 40px;
+    padding: 40px;
+    border: 1px solid #ccc;
+}
+
+/* 제목 중앙 정렬 */
+section h1,
+section h2,
+section h3 {
+    text-align: center;
+    margin: 15px 0;
+}
+
+/* 문단 중앙 정렬 */
+main p {
+    text-align: center;
+    margin: 8px 0;
+}
+
+/* 리스트: 블록 자체는 가운데, 항목은 왼쪽 */
 section ul,
 section ol {
-    /* 섹션 안에 있는 리스트만 여백설정*/
+    display: inline-block;
+    text-align: left;
     padding-left: 20px;
+    margin: 10px 0;
 }
 
 li {
     margin-bottom: 6px;
 }
 
-.container {
+/* 이미지, 테이블, 2단 레이아웃 가운데 */
+img, table, .two_col {
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* 표 스타일 */
+table, th, td {
+    border: 1px solid #ccc;
+    margin: 0 auto 16px;
+    border-collapse: collapse;
+    padding: 8px 5px;
+
+}
+
+/* 2단 레이아웃 */
+.two_col {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
 }
 
-/* 코드 블록 모양용 CSS*/
-code {
-    background-color: #eeeeee; 
-    padding: 2px 4px;
-    border-radius: 4px;        /* 모서리 둥글게 */
-    color: red;
-    font-size: 0.95em;
-}
-
-
-/* 본문(main)영역 */
-main {
-    flex: 1;
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 40px;
-    padding: 40px;
-    border: 1px solid #ccc
-}
-
-.two_col{
-    display: flex;
-    gap: 60px
-}
-.two_col pre{
+.two_col pre {
     flex: 1;
     background: #eeeeee;
     border-radius: 4px;
     padding: 10px;
     overflow-x: auto;
 }
-.two_col .explanation{
+
+.two_col .explanation {
     flex: 1;
 }
-/* 사이드바(목차) 영역 */
+
+/* 코드 블록 */
+code {
+    background-color: #eeeeee; 
+    padding: 2px 4px;
+    border-radius: 4px;
+    color: red;
+    font-size: 0.95em;
+}
+
+/* 사이드바(목차) */
 nav {
-    width: 200px;
+    width: 200px;         /* 고정 폭 */
+    flex-shrink: 0;       /* 줄어들지 않음 */
     padding: 20px;
     border-left: 1px solid #ccc;
     position: sticky;
     top: 0;
     height: 100vh;
+    text-align: left;
 }
 
 nav a {
