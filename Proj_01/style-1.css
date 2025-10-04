@@ -21,6 +21,11 @@ main {
     padding: 20px;
 }
 
+body {
+    font-size: 20px; /* 기본 글자 크기 16px → 18px로 확대 */
+    line-height: 1.6; /* 줄 간격도 조금 늘려서 가독성 향상 */
+}
+
 /* 섹션 스타일 */
 section {
     margin-bottom: 40px;
@@ -101,7 +106,7 @@ code {
 
 /* 사이드바(목차) */
 nav {
-    width: 200px;         /* 고정 폭 */
+    width: 250px;         /* 고정 폭 */
     flex-shrink: 0;       /* 줄어들지 않음 */
     padding: 20px;
     border-left: 1px solid #ccc;

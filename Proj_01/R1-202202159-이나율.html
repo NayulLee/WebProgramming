@@ -44,19 +44,19 @@
                             <tbody>
                                 <tr>
                                     <td><code>p</code></td>
-                                    <td>문단(Paragraph)</td>
+                                    <td style="text-align: left;">문단(Paragraph)</td>
                                 </tr>
                                 <tr>
                                     <td><code>h1</code> ~ <code>h6</code></td>
-                                    <td>제목(heading)을 표시</td>
+                                    <td style="text-align: left;">제목(heading)을 표시</td>
                                 </tr>
                                 <tr>
                                     <td><code>div</code></td>
-                                    <td>구역(divide)을 나누는 컨테이너</td>
+                                    <td style="text-align: left;">구역(divide)을 나누는 컨테이너</td>
                                 </tr>
                                 <tr>
                                     <td><code>ul</code></td>
-                                    <td>순서 없는 리스트를 표시</td>
+                                    <td style="text-align: left;">순서 없는 리스트를 표시</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -70,12 +70,28 @@
                             <li>옆의 다른 인라인 요소랑 나란히 배치할 수 있다.</li>
                         </ul>
                         <br>
-                        <ul><strong>대표 태그</strong>
-                            <li><code>strong</code> : 굵게 표시</li>
-                            <li><code>a</code> : 하이퍼링크</li>
-                            <li><code>img</code> : 이미지</li>
-                            <li><code>span</code> : 구간 나누기(짧은 텍스트 스타일 적용)</li>
-                        </ul>
+                        <strong>대표 태그</strong>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><code>strong</code></td>
+                                    <td style="text-align: left;">굵게 표시(bold)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>a</code> ~ <code>h6</code></td>
+                                    <td style="text-align: left;">하이퍼링크</td>
+                                </tr>
+                                <tr>
+                                    <td><code>img</code></td>
+                                    <td style="text-align: left;">이미지</td>
+                                </tr>
+                                <tr>
+                                    <td><code>span</code></td>
+                                    <td style="text-align: left;">구간 나누기
+                                        <br>(짧은 텍스트 스타일 적용할 때 자주 사용)</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
                         <p>👉 가장 많이 쓰는 건 <code>span</code>, 특정 글자에 색/스타일 주고 싶을 때 사용한다.</p>
                     </div>
@@ -90,52 +106,21 @@
                 <div class="two_col">
                     <img src="list_example.png" alt="예시 그림">
                     <div class="explanation">
-                        <strong>특징</strong>
-                        <ul>
-                            <li>항상 새 줄에서 시작</li>
-                            <li>한 줄 전체(가로)를 독점해서 차지한다. 따라서 옆에 다른 요소가 올 수 없다.</li>
-                        </ul>
-
-                        <strong>대표 태그</strong>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td><code>p</code></td>
-                                    <td>문단(Paragraph)</td>
-                                </tr>
-                                <tr>
-                                    <td><code>h1</code> ~ <code>h6</code></td>
-                                    <td>제목(heading)을 표시</td>
-                                </tr>
-                                <tr>
-                                    <td><code>div</code></td>
-                                    <td>구역(divide)을 나누는 컨테이너</td>
-                                </tr>
-                                <tr>
-                                    <td><code>ul</code></td>
-                                    <td>순서 없는 리스트를 표시</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <hr>
-
-                        <h3>🥕 인라인 태그</h3>
-                        <strong>특징</strong>
-                        <ul>
-                            <li>블록 태그 안에 들어가서 일부러 표시된다.</li>
-                            <li>옆의 다른 인라인 요소랑 나란히 배치할 수 있다.</li>
-                        </ul>
-
-                        <strong>대표 태그</strong>
-                        <ul>
-                            <li><code>strong</code> : 굵게 표시</li>
-                            <li><code>a</code> : 하이퍼링크</li>
-                            <li><code>img</code> : 이미지</li>
-                            <li><code>span</code> : 구간 나누기(짧은 텍스트 스타일 적용)</li>
-                        </ul>
-
-                        <p>👉 가장 많이 쓰는 건 <code>span</code>, 특정 글자에 색/스타일 주고 싶을 때 사용한다.</p>
+                        <ol>
+                            <li><strong>순서 있는 리스트 <code>ol...ol</code></strong>
+                                <br>항목들에 자동으로 번호 1, 2, 3이 붙는다.
+                                <br>안에 들어가는 항목은 <code>li</code>(list item)태그로 표현한다
+                            <li><strong>순서 없는 리스트 <code>ul...ul</code></strong>
+                                <br>번호 대신 불릿으로 표시된다
+                                <br><code>li</code>(list item)태그로 항목을 작성한다.
+                            <li><strong>정의 리스트(definition list) <code>dl...dl</code></strong>
+                                <br><strong>용어와 그에 대한 설명</strong>을 표현할 때 사용한다.<br>
+                                <ul style="text-align: left;">
+                                    <li><code>dt</code>: definition term(용어)</li>
+                                    <li><code>dd</code>: definition description(설명)</li>
+                                </ul>                              
+                        </ol>
+                        
                     </div>
                 </div>
             </section>
