@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header>
+    <header style="margin: 0 25px;">
         <h1>HTML태그 학습 정리</h1>
         <p>컴퓨터공학과 202202159 이나율</p>
     </header>
@@ -19,6 +19,20 @@
             <!-- 최애 친구들 -->
             <section id="friends">
                 <h1>🐰1. 최애 친구들</h1>
+                <div class="friends_list">
+                    <figure>
+                        <img src="friends1.png" alt="가나디">
+                        <figcaption>가나디</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="friends2.png" alt="고냐니">
+                        <figcaption>고냐니</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="friends3.png" alt="공룡이">
+                        <figcaption>공룡이</figcaption>
+                    </figure>
+                </div>
             </section>
 
             <!-- 텍스트 관련 태그 -->
@@ -33,7 +47,7 @@
                     <img src="block_inline_exmaple.png" alt="예시 그림">
                     <div class="explanation">
                         <h2>🥕 2.1. 블록 태그</h2>
-                        
+
                         <ul><strong>특징</strong>
                             <li>항상 새 줄에서 시작</li>
                             <li>한 줄 전체(가로)를 독점해서 차지한다. 따라서 옆에 다른 요소가 올 수 없다.</li>
@@ -64,7 +78,7 @@
                         <hr style="margin: 0 60px;">
 
                         <h2>🥕 2.2. 인라인 태그</h2>
-                        
+
                         <ul><strong>특징</strong>
                             <li>블록 태그 안에 들어가서 일부러 표시된다.</li>
                             <li>옆의 다른 인라인 요소랑 나란히 배치할 수 있다.</li>
@@ -88,7 +102,8 @@
                                 <tr>
                                     <td><code>span</code></td>
                                     <td style="text-align: left;">구간 나누기
-                                        <br>(짧은 텍스트 스타일 적용할 때 자주 사용)</td>
+                                        <br>(짧은 텍스트 스타일 적용할 때 자주 사용)
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -105,7 +120,7 @@
 
                 <div class="two_col">
                     <div class="pre">
-                    <img src="list_example.png" alt="예시 그림">
+                        <img src="list_example.png" alt="예시 그림">
                     </div>
                     <div class="explanation">
                         <br>
@@ -121,9 +136,9 @@
                                 <ul style="text-align: left;">
                                     <li><code>dt</code>: definition term(용어)</li>
                                     <li><code>dd</code>: definition description(설명)</li>
-                                </ul>                              
+                                </ul>
                         </ol>
-                        
+
                     </div>
                 </div>
             </section>
@@ -137,59 +152,71 @@
                         <img src="table_example.png" alt="테이블 코드">
                     </div>
                     <div class="explanation">
-                        <br><ol>
-                            <li><strong>표 전체를 담는 컨테이너<code>&ltol...ol&gt</code></strong>
+                        <br>
+                        <ol>
+                            <li><strong>표 전체를 담는 컨테이너<code>&lttable&gt</code></strong>
                                 <br>표의 시작과 끝을 감싸는 태그
-                                <br>안에 행<code>&lttr&gt</code>과 열<code>&ltth&gt, &lttd&gt</code>가 들어간다.</li>
+                                <br>안에 행<code>&lttr&gt</code>과 열<code>&ltth&gt, &lttd&gt</code>가 들어간다.
+                            </li>
                             <li><strong>표 제목<code>&ltcaption&gt</code></strong>
-                                <br>표 제목을 지정할 때 사용, 보통 표 맨 위에 나타난다.</li>
+                                <br>표 제목을 지정할 때 사용, 보통 표 맨 위에 나타난다.
+                            </li>
                             <li><strong>표의 헤딩 그룹<code>&ltthread&gt</code></strong>
                                 <br>표의 머리 부분, 열 제목, th들을 묶어주는 역할
-                                <br>여러 행이 필요할 때도 묶어서 관리 가능하다</li>
+                                <br>여러 행이 필요할 때도 묶어서 관리 가능하다
+                            </li>
                             <li><strong>표의 바닥 그룹<code>&lttfoot&gt</code></strong>
-                                <br>표의 바닥 부분. 합계, 평군 등 마지막 줄에 들어갈 데이터를 묶을 때 사용</li>
+                                <br>표의 바닥 부분. 합계, 평군 등 마지막 줄에 들어갈 데이터를 묶을 때 사용
+                            </li>
                             <li><strong>표의 본문 그룹<code>&lttbody&gt</code></strong>
                                 <br>실제 데이터 셀들을 모아서 관리한다
-                                <br><code>&lttr&gt</code>행 단위로 나누어 넣는다.</li>
+                                <br><code>&lttr&gt</code>행 단위로 나누어 넣는다.
+                            </li>
                             <li><strong>행(row)<code>&lttr&gt</code></strong>
-                                <br>표의 한 줄을 의미, 각 행 안에 열 제목<code>&ltth&gt</code>또는 데이터 <code>&lttd&gt</code>넣는다.</li>
+                                <br>표의 한 줄을 의미, 각 행 안에 열 제목<code>&ltth&gt</code>또는 데이터 <code>&lttd&gt</code>넣는다.
+                            </li>
                             <li><strong>열 제목 셀<code>&lttht&gt</code></strong>
                                 <br>머리글 셀, 보통 글자가 굵게 표시되고 가운데 정렬된다.
-                                <br>어떤 열의 의미인지 알려주는 셀</li>
+                                <br>어떤 열의 의미인지 알려주는 셀
+                            </li>
                             <li><strong>데이터 셀<code>&lttd&gt</code></strong>
-                                <br>실제 데이터를 넣는 셀, <code>&lttd&gt</code>와 달리 일반 글자 스타일</li>
+                                <br>실제 데이터를 넣는 셀, <code>&lttd&gt</code>와 달리 일반 글자 스타일
+                            </li>
                         </ol>
                     </div>
                 </div>
-            <hr style="margin: 15px;">
-            <h2>🥕 4.2. 표의 편집</h2>
-            HTML표(table)에서 셀 병합을 할 때 사용하는 속성
-            <div class="two_col">
+                <hr style="margin: 15px;">
+                <h2>🥕 4.2. 표의 편집</h2>
+                HTML표(table)에서 셀 병합을 할 때 사용하는 속성
+                <div class="two_col">
                     <div class="pre">
                         <img src="colspan_rowspan.png" alt="테이블 코드">
                     </div>
                     <div class="explanation">
                         <ol>
                             <li><strong>colspan</strong>
-                            <br>열을 합치는 속성
-                            <br>ex. 두 개의 열을 합치고 싶을 때 <code>colspan = "2"</code>
-                            <div class="info-box">
-                                <p> &lt td colspan="합칠 열의 개수"&gt ... &lt/td&gt
-                                   <br>&lt th colspan="합칠 열의 개수"&gt ... &lt/th&gt
-                                </p>
-                            </div></li>
+                                <br>열을 합치는 속성
+                                <br>ex. 두 개의 열을 합치고 싶을 때 <code>colspan = "2"</code>
+                                <div class="info-box">
+                                    <p> &lt td colspan="합칠 열의 개수"&gt ... &lt/td&gt
+                                        <br>&lt th colspan="합칠 열의 개수"&gt ... &lt/th&gt
+                                    </p>
+                                </div>
+                            </li>
                             <li><strong>rowspan</strong>
-                            <br>행을 합치는 속성
-                            <br>ex. 두 개의 행을 합치고 싶을 때 <code>rowspan = "2"</code>
-                            <div class="info-box">
-                                <p> &lt td rowspan="합칠 행의 개수"&gt ... &lt/td&gt
-                                   <br>&lt th rowspan="합칠 행의 개수"&gt ... &lt/th&gt
-                                </p>
-                            </div></li>
+                                <br>행을 합치는 속성
+                                <br>ex. 두 개의 행을 합치고 싶을 때 <code>rowspan = "2"</code>
+                                <div class="info-box">
+                                    <p> &lt td rowspan="합칠 행의 개수"&gt ... &lt/td&gt
+                                        <br>&lt th rowspan="합칠 행의 개수"&gt ... &lt/th&gt
+                                    </p>
+                                </div>
+                            </li>
                             <li><strong>주의할점</strong>
-                            <br>colspan / rowspan을 쓰면 표의 셀 개수가 달라지므로
-                            <br>다른 행이나 열에 맞게 <code>&lttd&gt</code>개수를 조정해야 한다.
-                            <br>안그러면 표의 모양이 깨질 수 있다.</li>
+                                <br>colspan / rowspan을 쓰면 표의 셀 개수가 달라지므로
+                                <br>다른 행이나 열에 맞게 <code>&lttd&gt</code>개수를 조정해야 한다.
+                                <br>안그러면 표의 모양이 깨질 수 있다.
+                            </li>
                         </ol>
                         <hr style="margin: 0 50px;">
                         <div class="pre">
@@ -198,36 +225,36 @@
                         </div>
                     </div>
 
-            </div>
+                </div>
             </section>
 
             <!-- 미디어 관련 태그 -->
             <section id="mediaTag">
                 <h1>🐰5. 미디어 관련 태그</h1>
-                <h2>🥕 5.1. HTML5미디어 삽입의 표준화</h2>                
+                <h2>🥕 5.1. HTML5미디어 삽입의 표준화</h2>
                 <div class="explanation">
                     <p>과거에는 웹페이지에 음악이나 영상을 넣으려면 플러그인(Plugin)
                         <br> → Adobe Flash Player, ReadPlayer같은 외부 프로그램이 꼭 필요했다.
                         <br>하지만 HTML5부터는 <strong>표준 태그 <code>&ltaudio&gt</code>와
-                         <code>&ltvideo&gt</code></strong>를 사용하여 브라우저 자체에서 미디어를 재생할 수 있게 되었다.
-                         <ol>
-                            <li>별도의 플러그인 설치❌</li>
-                            <li>HTML코드만으로 오디오, 비디오 재생 가능</li>
-                         </ol>
+                            <code>&ltvideo&gt</code></strong>를 사용하여 브라우저 자체에서 미디어를 재생할 수 있게 되었다.
+                    <ol>
+                        <li>별도의 플러그인 설치❌</li>
+                        <li>HTML코드만으로 오디오, 비디오 재생 가능</li>
+                    </ol>
                     </p>
                     <h3> ☁️ 비표준 미디어 재생</h3>
                     <p>만약 삽입하려는 파일이 표준 포맷이 아니라면(ex.Flash, <code>.swf</code>, 혹은 특수 코덱 영상 등
-                    <br>HTML5태그만으로는 재생할 수 없다.
-                    <br>이럴 땐 외부 프로그램을 웹페이지 안에 삽입하는 기존 방식의 태그인
-                        <ul>
-                            <li><code>embed</code></li>
-                            <li><code>object</code></li>
-                        </ul>
-                        <br>→ 하지만 보안 문제와 브라우저 호환성 문제 때문에 현대 웹에서는 거의 사용하지 않는다.
+                        <br>HTML5태그만으로는 재생할 수 없다.
+                        <br>이럴 땐 외부 프로그램을 웹페이지 안에 삽입하는 기존 방식의 태그인
+                    <ul>
+                        <li><code>embed</code></li>
+                        <li><code>object</code></li>
+                    </ul>
+                    <br>→ 하지만 보안 문제와 브라우저 호환성 문제 때문에 현대 웹에서는 거의 사용하지 않는다.
                     </P>
                 </div>
-                <hr style="margin: 20px;">
-                <h2>🥕 5.2. <code>&ltvideo&gt</code>태그 - 비디오 삽입</h2>                
+                <hr style="margin: 0 250px; background-color: #ddd;">
+                <h2>🥕 5.2. <code>&ltvideo&gt</code>태그 - 비디오 삽입</h2>
                 <div class="explanation">
                     <div class="code-box">
                         &ltvideo src="bear.mp4" width="320" height="240" controls&gt&lt/video&gt
@@ -239,9 +266,54 @@
                         <li><code>&ltcontrols&gt</code>:재생/일시정시/음소거/전체화면 등 제어 버튼 표시</li>
                         <li><code>&ltautoplay&gt</code>:자동 재생</li>
                         <li><code>&ltloop&gt</code>: 반복 재생</li>
-                        <li><code>&ltmuted&gt</code>: 음소거(단, 대부분의 브라우저는 사용자 상호작용 전 자동재생을 막는다</li>
-                    </ul> 
-                </div> 
+                        <li><code>&ltmuted&gt</code>: 음소거(단, 대부분의 브라우저는 사용자 상호작용 전 자동재생을 막는다)</li>
+                    </ul>
+                    <h3> ☁️ 여러 비디오 파일 지정(대체 소스)</h3>
+                    마찬가지로 브라우저별로 지원하는 비디오 포맷이 다르다.
+                    <table width="600">
+                        <thead style="background: #f5f5f5;">
+                            <tr>
+                                <th>포맷</th>
+                                <th>MIME타입</th>
+                                <th>주요 지원 브라우저</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>WebM</td>
+                                <td>video/mp4</td>
+                                <td>거의 모든 브라우저</td>
+                            </tr>
+                            <tr>
+                                <td>MP4(H.264)</td>
+                                <td>video/webm</td>
+                                <td>Chrome, Firefox, Edge</td>
+                            </tr>
+                            <tr>
+                                <td>Ogg</td>
+                                <td>video/ogg</td>
+                                <td>Firefox, Opera</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <hr style="margin: 0 250px; background-color: #ddd;">
+                <h2>🥕 5.3. <code>&ltaudio&gt</code>태그 - 오디오 삽입</h2>
+                <div class="explanation">
+                    <div class="code-box">
+                        &ltaudio src="mymusic.mp3" controls loop&gt&lt/audio&gt
+                    </div>
+                    <ul>
+                        <li><code>&ltaudio&gt</code>: HTML5 오디오 재생용 태그</li>
+                        <li><code>&ltsrc&gt</code>: 재생할 오디오 파일 경로 지정</li>
+                        <li><code>&ltcontrols&gt</code>: 재생/ 일시정지/ 볼륨 등 기본 컨트롤 UI표시</li>
+                        <li><code>&ltloof&gt</code>: 재생이 끝나면 자동으로 다시 시작</li>
+                        <li><code>&ltautoplay&gt</code>: 페이지가 로드되면 자동 재생<br>
+                            (단, 대부분의 브라우저는 사용자 상호작용 전 자동재생을 막는다)</li>
+                    </ul>
+                </div>
                 <div class="two_col">
                     <div class="pre">
                         <img src="autio_tag_example.png" alt="audio태그 코드">
@@ -254,17 +326,17 @@
                         </ul>
                     </div>
                     <div class="explanation">
-                    <h3> ☁️ 여러 오디오 파일 지원(대체 소스)</h3>
-                    <p>
-                    브라우저마다 지원하는 오디오 포맷이 다르다
-                    <ul>
-                        <li>크롬, 엣지 → <code>.mp3</code>, <code>.ogg</code>,<code>.wav</code>지원</li>
-                        <li>사파리 → <code>.mp3</code><code>.aac</code>지원</li>
-                    </ul>
-                    <br>따라서, 여러 포맷을 지정해두면 브라우저가 재생 가능한 파일을 자동 선택한다.
-                    </p>
+                        <h3> ☁️ 여러 오디오 파일 지원(대체 소스)</h3>
+                        <p>
+                            브라우저마다 지원하는 오디오 포맷이 다르다
+                        <ul>
+                            <li>크롬, 엣지 → <code>.mp3</code>, <code>.ogg</code>,<code>.wav</code>지원</li>
+                            <li>사파리 → <code>.mp3</code><code>.aac</code>지원</li>
+                        </ul>
+                        <br>따라서, 여러 포맷을 지정해두면 브라우저가 재생 가능한 파일을 자동 선택한다.
+                        </p>
                     </div>
-                </div> 
+                </div>
             </section>
         </main>
 
@@ -278,6 +350,9 @@
             <a href="#mediaTag">5. 미디어 관련 태그</a>
         </nav>
     </div>
+    <footer>
+    <p>© 2025 컴퓨터공학과 202202159 이나율. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>

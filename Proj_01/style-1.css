@@ -26,6 +26,25 @@ body {
     line-height: 1.6; /* 줄 간격도 조금 늘려서 가독성 향상 */
 }
 
+/* 최애 친구들용 */
+.friends_list {
+    justify-content: center;
+    display: flex;              
+    gap: 100px;                  
+    flex-wrap: wrap; /* 아이템이 한줄에 다 들어가지 않을 때 자동으로 다음줄 넘기기*/           
+}
+
+.friends_list figure {
+    text-align: center;         
+}
+
+.friends_list img {
+    width: 300px;               
+    height: 300px;
+    object-fit: cover;         
+}
+
+
 /* 섹션 스타일 */
 section {
     margin-bottom: 40px;
