@@ -99,9 +99,18 @@ table, th, td {
     border: 2px solid #aaa;   /* 테두리 색과 두께 */
     border-radius: 10px;      /* 모서리 둥글게 */
     padding: 20px;            /* 내부 여백 */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
     margin-top: 20px;         /* 위쪽 간격 */
     text-align: left;         /* 내용 왼쪽 정렬 */
+}
+
+.code-box { /* 코드 블록 */
+    background-color: #f0f0f0;
+    border-radius: 10px;      /* 모서리 둥글게 */
+    padding: 20px;            /* 내부 여백 */
+    width: 60%;
+    margin: 20px auto;         /* 위쪽 간격 */
+    text-align: left;         /* 내용 왼쪽 정렬 */
+    font-family: Consolas, "Courier New", monospace;
 }
 
 
@@ -112,6 +121,7 @@ code {
     border-radius: 4px;
     color: red;
     font-size: 0.95em;
+    font-family: Consolas, "Courier New", monospace;
 }
 
 /* 사이드바(목차) */

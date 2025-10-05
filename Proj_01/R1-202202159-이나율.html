@@ -18,16 +18,12 @@
         <main>
             <!-- 최애 친구들 -->
             <section id="friends">
-                <header>
                 <h1>🐰1. 최애 친구들</h1>
-                </header>
             </section>
 
             <!-- 텍스트 관련 태그 -->
             <section id="textTag">
-                <header>
                 <h1>🐰2. 텍스트 관련 태그</h1>
-                </header>
                 <p>
                     HTML 태그는 크게 <strong>블록(block)과 인라인(inline)</strong>으로 나뉜다.<br>
                     이 차이는 <strong>화면에 배치되는 방식의 차이</strong>이다.
@@ -208,6 +204,67 @@
             <!-- 미디어 관련 태그 -->
             <section id="mediaTag">
                 <h1>🐰5. 미디어 관련 태그</h1>
+                <h2>🥕 5.1. HTML5미디어 삽입의 표준화</h2>                
+                <div class="explanation">
+                    <p>과거에는 웹페이지에 음악이나 영상을 넣으려면 플러그인(Plugin)
+                        <br> → Adobe Flash Player, ReadPlayer같은 외부 프로그램이 꼭 필요했다.
+                        <br>하지만 HTML5부터는 <strong>표준 태그 <code>&ltaudio&gt</code>와
+                         <code>&ltvideo&gt</code></strong>를 사용하여 브라우저 자체에서 미디어를 재생할 수 있게 되었다.
+                         <ol>
+                            <li>별도의 플러그인 설치❌</li>
+                            <li>HTML코드만으로 오디오, 비디오 재생 가능</li>
+                         </ol>
+                    </p>
+                    <h3> ☁️ 비표준 미디어 재생</h3>
+                    <p>만약 삽입하려는 파일이 표준 포맷이 아니라면(ex.Flash, <code>.swf</code>, 혹은 특수 코덱 영상 등
+                    <br>HTML5태그만으로는 재생할 수 없다.
+                    <br>이럴 땐 외부 프로그램을 웹페이지 안에 삽입하는 기존 방식의 태그인
+                        <ul>
+                            <li><code>embed</code></li>
+                            <li><code>object</code></li>
+                        </ul>
+                        <br>→ 하지만 보안 문제와 브라우저 호환성 문제 때문에 현대 웹에서는 거의 사용하지 않는다.
+                    </P>
+                </div>
+                <hr style="margin: 20px;">
+                <h2>🥕 5.2. <code>&ltvideo&gt</code>태그 - 비디오 삽입</h2>                
+                <div class="explanation">
+                    <div class="code-box">
+                        &ltvideo src="bear.mp4" width="320" height="240" controls&gt&lt/video&gt
+                    </div>
+                    <ul>
+                        <li><code>&ltvideo&gt</code>: HTML5 영상 재생용 태그</li>
+                        <li><code>&ltsrc&gt</code>: 영상 파일 경로</li>
+                        <li><code>&ltwidth&gt</code>, <code>&ltheight&gt</code>: 영상 재생 영역 크기</li>
+                        <li><code>&ltcontrols&gt</code>:재생/일시정시/음소거/전체화면 등 제어 버튼 표시</li>
+                        <li><code>&ltautoplay&gt</code>:자동 재생</li>
+                        <li><code>&ltloop&gt</code>: 반복 재생</li>
+                        <li><code>&ltmuted&gt</code>: 음소거(단, 대부분의 브라우저는 사용자 상호작용 전 자동재생을 막는다</li>
+                    </ul> 
+                </div> 
+                <div class="two_col">
+                    <div class="pre">
+                        <img src="autio_tag_example.png" alt="audio태그 코드">
+                        <br>
+                        <ul>
+                            <li><code>&ltsource&gt</code>: 오디오 파일의 후보를 지정</li>
+                            <li><code>&lttype&gt</code>: MIME타입(파일 형식)명시 → 브라우저가 어떤 파일인지 인식하도록 도움</li>
+                            <li><code>&ltaudio&gt</code> 태그 안의 텍스트("브라우저가 audio 태그를 지원하지 않습니다.")는
+                                <br> 대체 문구(fallback) — 만약 구형 브라우저가 audio를 지원하지 않을 때 표시
+                        </ul>
+                    </div>
+                    <div class="explanation">
+                    <h3> ☁️ 여러 오디오 파일 지원(대체 소스)</h3>
+                    <p>
+                    브라우저마다 지원하는 오디오 포맷이 다르다
+                    <ul>
+                        <li>크롬, 엣지 → <code>.mp3</code>, <code>.ogg</code>,<code>.wav</code>지원</li>
+                        <li>사파리 → <code>.mp3</code><code>.aac</code>지원</li>
+                    </ul>
+                    <br>따라서, 여러 포맷을 지정해두면 브라우저가 재생 가능한 파일을 자동 선택한다.
+                    </p>
+                    </div>
+                </div> 
             </section>
         </main>
 
