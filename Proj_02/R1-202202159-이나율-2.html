@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <title>웹 폼 태그 학습 정리</title>
     <link rel="stylesheet" href="style-2.css">
 </head>
+
 <body>
     <header>
         <h1>웹 폼 태그 학습 정리</h1>
@@ -14,29 +16,30 @@
     <div class="container">
         <main>
             <!-- 섹션 1: 폼 구조 -->
-            <section id="structure">               
+            <section id="structure">
                 <div class="content-box">
                     <h1>🦄 1. 폼의 구조</h1>
                     <h2>🫧 1.1<code>&lt;form&gt;</code> 태그 기본 구조</h2>
                     <pre><code>&lt;form name="fo" method="get"&gt;...&lt;/form&gt;</code></pre>
                     <ul style="margin: 0 20px;">
                         <li><code>&lt;form&gt;</code>태그는 <strong>폼 전체를 감싸는 컨테이너 역할.</strong></li>
-                        <li>이 안에 <code>&lt;input&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;textarea&gt;</code></li>
+                        <li>이 안에 <code>&lt;input&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;textarea&gt;</code>
+                        </li>
                         같은 태그들이 실제로 사용자 입력을 받게 되고,
                         <br>이러한 입력 요소들을 모두 포함시켜야 서버로 전송할 수 있다.</li>
                     </ul>
                     <hr>
-                    <h2>🫧 1.2 name</h2>
+                    <h3> 💎name</h3>
                     폼의 이름을 지정한다<br>
                     이 이름은 주로 자바스크립트에서 폼을 식별하거나 접근할 때 사용된다.<br>
                     즉, HTML문서 안에 여러 개의 폼이 존재할 경우, 각각을 구분하기 위해 부여하는 이름표<br>
                     <pre><code>&lt;form name="loginForm"&gt;...&lt;/form&gt;</code></pre>
                     👉 자바스크립트에서 <code>document.loginForm</code>이라고 작성하여 이 폼을 직접 참조할 수 있게 된다.
-                
+
                     <hr>
-                    <h2>🫧 1.3 action</h2>
+                    <h3>💎action</h3>
                     폼 데이터를 <strong>어느 서버로 보낼지</strong>를 결정한다.
-                     <ul style="margin: 0 20px;">
+                    <ul style="margin: 0 20px;">
                         <li>사용자가 입력을 마치고 submit 버튼을 눌렀을 때<br>
                             브라우저가 데이터를 전송할 <strong>목적지 주소(URL)을 알려주는 역할.</strong></li>
                         <li>이 속성에 지정되는 값은 주로 서버 쪽 프로그램의 주소이다.<br>
@@ -45,85 +48,87 @@
                     <pre><code>action="https://search.naver.com/search.naver"</code></pre>
                     👉 브라우저는 사용자가 데이터를 제출했을 때<br>
                     <code>serch.naver.com</code>서버로 연결하여 <code>serch.naver</code>라는 이름의 프로그램을 실행하도록 요청
-                    <hr>    
-                    <h2>🫧 1.4 method속성(GET, POST)</h2>
+                    <hr>
+                    <h3>💎 method속성(GET, POST)</h3>
                     폼 데이터를 서버로 전송할 때 사용할 <strong>전송 방식</strong>을 지정한다.<br>
                     <ol style="margin: 0 20px;">
                         <li><strong>GET</strong>
-                        <br>사용자가 입력한 데이터를 url의 끝부분에 붙여서 전송한다. 
-                        <br>단순한 검색 조회용 요청에는 적합하지만 보안성 낮다                          
+                            <br>사용자가 입력한 데이터를 url의 끝부분에 붙여서 전송한다.
+                            <br>단순한 검색 조회용 요청에는 적합하지만 보안성 낮다
                         </li>
                         <li><strong>POST</strong></li>
+                        데이터를 HTTP메시지의 본문(body)에 담아 전송한다.
+                        <ul>
+                            <li>주소창에는 입력 내용이 보이지 않는다.</li>
+                            <li>비밀번호나 개인 정보처럼 외부에 노출되면 안되는 데이터를 보낼 때 사용.</li>
+                        </ul>
                     </ol>
+                    <hr>
+                    <h2>🫧2. 폼 구조 태그</h2>
+                    두 태그는 <strong>폼의 시각적/논리적 구조를 잡는 역할을 한다.</strong>
+                    <br>→ 사용자 입력을 받는 태그가 아니다
+                    <h3>💎<code>&lt;fieldset&gt</code>태그</h3>
+                    <pre><code>&lt;fieldset&gt; ... &lt;/fieldset&gt;</code></pre>
+                    <ul style="margin: 0 20px;">
+                        <li>폼의 내용이 시각적으로 박스 형태로 묶여 표시된다.(기본적으로 테두리가 생긴다)</li>
+                        <li>묶인 그룹을 하나의 단위처럼 관리할 수 있다(비활성화 등...)</li>
+                    </ul>
+                    <br>
+                    <h3>💎<code>&lt;legend&gt</code>태그</h3>
+                    <code>&lt;fieldset&gt</code>바로 안에 위치해야 하며, 해당 영역의 <strong>제목(label)</strong>을 표시한다.
+                    제목 텍스트를 넣는 용도로만 사용한다.
+                    <img src="legend_example.png" ale="legend태그 예제 코드">
                 </div>
             </section>
 
             <!-- 섹션 2: input 태그 유형 -->
             <section id="input-types">
-                <h2>2. input 태그 유형</h2>
-
                 <div class="content-box">
-                    <h3>text, password, email</h3>
-                    <pre><code>
-<input type="text" name="username">
-<input type="password" name="password">
-<input type="email" name="email">
-                    </code></pre>
-                </div>
-
-                <div class="content-box">
-                    <h3>radio, checkbox</h3>
-                    <pre><code>
-<input type="radio" name="gender" value="male">
-<input type="radio" name="gender" value="female">
-
-<input type="checkbox" name="agree">
-                    </code></pre>
+                    <h1>🦄 2. input태그 유형</h1>
+                    <code>&lt;input&gt</code> : 한 줄 입력창, 체크박스, 라디오버튼, 파일 선택창 등 다양한 입력 형태를 만든다.
+                    <table width="600">
+                        <thead style="background: #f5f5f5;">
+                            <tr style="text-align: left;">
+                                <th>폼 요소</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>WebM</td>
+                                <td>video/mp4</td>
+                            </tr>
+                            <tr>
+                                <td>MP4(H.264)</td>
+                                <td>video/webm</td>
+                            </tr>
+                            <tr>
+                                <td>Ogg</td>
+                                <td>video/ogg</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </section>
 
             <!-- 섹션 3: 다양한 폼 요소 -->
             <section id="other-elements">
-                <h2>3. 다양한 폼 요소</h2>
-
                 <div class="content-box">
-                    <h3>&lt;select&gt; 태그</h3>
-                    <pre><code>
-<select name="options">
-    <option value="1">옵션1</option>
-    <option value="2">옵션2</option>
-</select>
-                    </code></pre>
-                </div>
-
-                <div class="content-box">
-                    <h3>&lt;textarea&gt; &lt;button&gt;</h3>
-                    <pre><code>
-<textarea name="message"></textarea>
-<button type="submit">제출</button>
-                    </code></pre>
+                    <h1>🦄 3. 다양한 폼 요소</h1>
                 </div>
             </section>
-
             <!-- 섹션 4: 종합 예제 -->
             <section id="survey-example">
-                <h2>4. 종합 예제: 설문조사 폼</h2>
-
                 <div class="content-box">
-                    <pre><code>
-<form action="#" method="post">
-    <fieldset>
-        <legend>강의 만족도 설문조사</legend>
-        <label>이름: <input type="text" name="name"></label>
-        <label>만족도:
-            <input type="radio" name="satisfaction" value="좋음">좋음
-            <input type="radio" name="satisfaction" value="보통">보통
-            <input type="radio" name="satisfaction" value="나쁨">나쁨
-        </label>
-        <button type="submit">제출</button>
-    </fieldset>
-</form>
-                    </code></pre>
+                    <h1>🦄 4. 종합 예제</h1>
+                    <h2> 🫧 4.1. 강의 만족도 설문조사</h2>
+                    위에서 학습한 태그들을 활용하여 강의 만족도 설문조사 폼 예제를 만들어 본다.
+                    <iframe src="survey_form.html" width="100%" height="500"
+                        style="border:1px solid 
+                        #ccc; border-radius:8px;" 
+                        title="설문 조사 예제" 
+                        scrolling="yes">
+                    </iframe>
                 </div>
             </section>
         </main>
@@ -142,4 +147,5 @@
         <p>&copy; 2025 이나율</p>
     </footer>
 </body>
+
 </html>

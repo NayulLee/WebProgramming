@@ -8,15 +8,14 @@
 body {
     font-family: "맑은 고딕", sans-serif;
     line-height: 2;
-    font-size: 18px; /* 기존보다 키움 (기본 16px보다 큼) */
+    font-size: 17px; 
     background-color: #f9f9f9;
     color: #333;
 }
 
 /* 헤더 */
 header {
-    background-color: #4CAF50;
-    color: white;
+    color: black;
     padding: 20px;
     text-align: center;
 }
@@ -47,7 +46,6 @@ section {
     background-color: #fff;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
 hr {
@@ -94,16 +92,6 @@ pre code {
     text-decoration: none;
     color: #333;
     font-weight: 500;
-}
-
-
-/* 푸터 */
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #ddd;
-    margin-top: 40px;
-    border-radius: 0 0 8px 8px;
 }
 
 /* 코드 블록 */
