@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>종합 예제</title>
+  <link rel="stylesheet" href="survey_style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>강의 만족도 설문조사</h1>
+
+    <form>
+      <section class="info-section">
+        <h2>기본 정보</h2>
+
+        <label for="student-id">학번</label>
+        <input type="text" id="student-id" name="student-id" placeholder="학번을 입력하세요 (예: 202202159)" required>
+
+        <label for="name">성명</label>
+        <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
+
+        <label for="department">학과 선택</label>
+        <select id="department" name="department" required>
+          <option value="">- 학과를 선택하세요 -</option>
+          <option value="computer">컴퓨터공학과</option>
+          <option value="software">소프트웨어학과</option>
+          <option value="design">디자인학과</option>
+          <option value="mechanical">기계공학과</option>
+        </select>
+
+        <label for="subject">강의명</label>
+        <input type="text" id="subject" name="subject" placeholder="수강한 강의명을 입력하세요" required>
+      </section>
+
+      <section class="survey-section">
+        <h2>설문 내용</h2>
+
+        <p>강의에 대해 전반적으로 만족하셨나요?</p>
+        <div class="radio-group">
+          <label><input type="radio" name="satisfaction" value="매우만족" required> 매우 만족</label>
+          <label><input type="radio" name="satisfaction" value="만족"> 만족</label>
+          <label><input type="radio" name="satisfaction" value="보통"> 보통</label>
+          <label><input type="radio" name="satisfaction" value="불만족"> 불만족</label>
+          <label><input type="radio" name="satisfaction" value="매우불만족"> 매우 불만족</label>
+        </div>
+
+        <p>강의의 어떤 점이 좋았나요? (복수 선택 가능)</p>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="strength" value="내용의 깊이"> 내용의 깊이</label>
+          <label><input type="checkbox" name="strength" value="교수님의 전달력"> 교수님의 전달력</label>
+          <label><input type="checkbox" name="strength" value="강의 자료의 질"> 강의 자료의 질</label>
+          <label><input type="checkbox" name="strength" value="자세한 설명"> 자세한 설명</label>
+          <label><input type="checkbox" name="strength" value="좋은 실습자료"> 좋은 실습자료</label>
+          <label><input type="checkbox" name="strength" value="소통 및 피드백"> 소통 및 피드백</label>
+          <label><input type="checkbox" name="strength" value="기타"> 기타</label>
+        </div>
+
+        <label for="opinion">기타 의견</label>
+        <textarea id="opinion" name="opinion" placeholder="강의에 대한 의견이나 건의사항을 자유롭게 작성해주세요."></textarea>
+      </section>
+
+      <button type="submit">설문 제출</button>
+    </form>
+  </div>
+
+</body>
+</html>
