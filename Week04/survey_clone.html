@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문조사 폼</title>
+    <link rel="stylesheet" href="survey_clone.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center; color: lightblue;">강의 만족도 설문조사</h1>
+        <form>
+            <!--기본 정보 섹션-->
+            <fieldset class="info-section">
+                <legend><strong>기본 정보</strong></legend>
+                <div class="form-group">
+                    <label for="id"><strong>학번</strong></label>
+                    <input type="text" id="id" placeholder="학번을 입력하세요 (예: 202202159)">
+                </div>
+
+                <div class="form-group">
+                    <label for="name"><strong>성명</strong></label>
+                    <input type="text" id="name" placeholder="이름을 입력하세요">
+                </div>
+
+                <div class="form-group">
+                    <label for="major"><strong>학과 선택</strong></label>
+                    <select name="major">
+                        <option value="1" selected>-학과를 선택하세요-</option>
+                        <option value="2">컴퓨터공학과</option>
+                        <option value="3">소프트웨어학과</option>
+                        <option value="4">디자인학과</option>
+                        <option value="5">기계공학과</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="lecture"><strong>강의명</strong></label>
+                    <input type="text" id="id" placeholder="수강한 강의명을 입력하세요">
+                </div>
+            </fieldset>
+
+            <!--설문 내용 섹션-->
+            <fieldset class="survey-section">
+                <legend><strong>설문 내용</strong></legend>
+                <p><strong>강의에 대해 전반적으로 만족하셨나요?</strong></p>
+                <div class="radio-group">
+                    <label><input type="radio" id="satisfy1" name="satisfaction" value="매우 만족"> 매우 만족</label>                   
+                    <label><input type="radio" id="satisfy2" name="satisfaction" value="만족"> 만족</label>
+                    <label><input type="radio" id="satisfy3" name="satisfaction" value="보통"> 보통</label>
+                    <label><input type="radio" id="satisfy4" name="satisfaction" value="불만족"> 불만족</label>
+                    <label><input type="radio" id="satisfy5" name="satisfaction" value="매우 불만족"> 매우 불만족</label>
+                </div>
+
+                <p><strong>강의의 어떤 점이 좋았나요?(복수 선택 가능)</strong></p>
+
+
+
+
+                
+            </fieldset>
+
+        </form>
+    </div>
+</body>
+
+</html>

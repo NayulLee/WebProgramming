@@ -1,0 +1,50 @@
+.container{
+    width: 600px;
+    margin: 50px auto; /* auto: 가운데 정렬 */
+    padding: 30px;
+    border: 2px solid lightblue;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* 약한 그림자 */
+
+}
+
+body{
+    background-color: #f5f5f5;
+}
+
+.info-section,.survey-section{
+    margin: 30px;
+    padding: 20px;
+    border: 2px solid lightblue;
+    border-radius: 10px;
+}
+
+.info-section legend,.survey-section legend{
+    color: lightskyblue;
+}
+
+input, select{ 
+    width: 100%; 
+    margin: auto;
+    padding: 8px; 
+    border: 2px solid lightblue; 
+    border-radius: 5px; 
+    box-sizing: border-box;
+}
+
+.form-group{
+    margin: 13px auto;
+}
+
+.radio-group{
+    display: flex;
+    gap: 20px; /* 버튼 + 라벨 사이 간격 */
+}
+
+input[type="radio"] {
+    width: auto;
+    margin: 0; /* label 안에 있으므로 margin 필요 없음 */
+}
+
+
