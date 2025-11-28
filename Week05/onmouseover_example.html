@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 리스너 속성에 자바스크립트 코드</title>
+    <script>
+        function over(obj){
+            obj.src = "friends1.png";
+        }
+        function out(obj){
+            obj.src = "friends2.png";
+        }
+    </script>
+</head>
+<body>
+    <h1>마우스 올려 보세요</h1>
+    <hr>
+    <img src="friends2.png" alt="나안아.."
+        onmouseover="over(this)"
+        onmouseout="out(this)">
+    
+</body>
+</html>

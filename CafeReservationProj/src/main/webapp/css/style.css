@@ -1,0 +1,125 @@
+body {
+    font-family: 'Arial', sans-serif; 
+    background-color: #f4f4f9;
+    color: #333; 
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/*제목 스타일 */
+h1 {
+    color: #007bff; 
+    margin-bottom: 20px;
+}
+
+/*폼 컨테이너 스타일 */
+form {
+    background-color: #fff; 
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 */
+    width: 100%;
+    max-width: 500px; /* 폼 최대 너비 제한 */
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #007bff;
+    padding: 0 10px;
+}
+
+/* 입력 요소 스타일 */
+label {
+    display: inline-block; 
+    width: 100px; 
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: calc(100% - 110px); /* 전체 너비에서 라벨 너비만큼 제외 */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* 패딩이 전체 크기에 포함되도록 설정 */
+}
+
+textarea {
+    resize: vertical; /* 세로 크기만 조절 가능 */
+    width: 100%;
+    margin-top: 5px;
+}
+
+.radio-group {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.radio-group label {
+    width: auto; 
+    font-weight: normal;
+    margin-right: 15px;
+}
+
+
+.button-group {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+button[type="reset"] {
+    background-color: #6c757d;
+    color: white;
+}
+
+button[type="reset"]:hover {
+    background-color: #5a6268;
+}
+
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
